@@ -198,7 +198,7 @@ with tab2:
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Image", use_container_width=True)
         
-        if st.button("Extract & Solve"):
+        if st.button("Extract & Solve",key="extract_solve_button_1"):
             with st.spinner("Extracting text..."):
                 extracted_text = extract_text_from_image(image)
                 st.session_state.messages.append({"role": "user", "content": f"Extracted: {extracted_text}"})
@@ -219,7 +219,7 @@ with tab3:
         if camera_image is not None:
             image = Image.open(camera_image)
             
-            if st.button("Extract & Solve"):
+            if st.button("Extract & Solve",key="extract_solve_button_2"):
                 with st.spinner("Extracting text..."):
                     extracted_text = extract_text_from_image(image)
                     st.session_state.messages.append({"role": "user", "content": f"Extracted: {extracted_text}"})
