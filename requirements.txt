@@ -16,3 +16,4 @@ pillow
 opencv-python
 pandas
 wikipedia
+opencv-python-headless
