@@ -1,0 +1,17 @@
+
+langchain
+python-dotenv
+langchain-community
+bs4
+langchain-text-splitters
+streamlit
+langchain_groq
+langserve
+langchain-google-community
+langchain_gemini
+google-generativeai
+langchain-google-genai
+sympy
+pillow
+opencv-python
+pandas
