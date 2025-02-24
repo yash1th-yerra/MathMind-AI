@@ -17,7 +17,7 @@ import numpy as np
 load_dotenv()
 
 # Configure Streamlit page
-st.set_page_config(page_title="Math Solver", layout="centered")
+st.set_page_config(page_title="MathMind AI", layout="centered",page_icon="🧮")
 
 # Custom CSS for Styling
 st.markdown("""
@@ -56,7 +56,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='title'>📘 Math Solver: Text & Image Processing</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='title'>📘 MathMind AI: Text & Image Processing</h1>", unsafe_allow_html=True)
 
 # Load API keys
 groq_api_key = os.getenv("GROQ_API_KEY")
