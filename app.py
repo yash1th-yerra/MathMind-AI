@@ -8,7 +8,7 @@ import os
 import sympy as sp
 import time
 from PIL import Image
-import cv2
+# import cv2
 import numpy as np
 
 # Load environment variables
@@ -99,7 +99,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["📝 Text Input", "🖼 Upload Image", "📸 
 with tab1:
     st.subheader("🔢 Type Your Math Problem")
     user_question = st.text_input("Enter math expression (e.g., x^2 - 4x + 4 = 0):")
-    if st.button("Solve Text Problem"):
+    if st.button("Solve Text Problem",key="tab1"):
         if user_question.strip():
             st.session_state.last_question = user_question
             st.session_state.text_output = solve_with_preference(user_question)
@@ -112,8 +112,8 @@ with tab2:
     uploaded_file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
-        if st.button("Extract & Solve"):
+        st.image(image, caption="Uploaded Image", use_container_width=True)
+        if st.button("Extract & Solve",key="tab2"):
             with st.spinner("Extracting text..."):
                 extracted_text = extract_text_from_image(image)
                 st.session_state.last_question = extracted_text
@@ -127,7 +127,7 @@ with tab3:
         camera_image = st.camera_input("Take a picture")
         if camera_image is not None:
             image = Image.open(camera_image)
-            if st.button("Extract & Solve"):
+            if st.button("Extract & Solve",key="tab3"):
                 with st.spinner("Extracting text..."):
                     extracted_text = extract_text_from_image(image)
                     st.session_state.last_question = extracted_text
