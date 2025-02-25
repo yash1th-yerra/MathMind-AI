@@ -25,7 +25,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='title'>📘 MathMind AI: Text & Image Processing</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='title'>📘 MathMind AI:Advanced Math Solver</h1>", unsafe_allow_html=True)
 
 # Initialize session state
 if 'use_streaming' not in st.session_state:
